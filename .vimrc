@@ -84,12 +84,8 @@ set fileencoding=utf-8
 
 "we want to keep backups of our code
 set backup
-"if we're using windows, have backup in vimfiles folder, otherwise, just in home
-if has('win32')
-    let s:homedir = "$HOME/vimfiles"
-else
-    let s:homedir = "$HOME/.vim/"
-endif
+
+let s:homedir = "$HOME/.vim/"
 
 "set the backup directory now..
 execute "set backupdir=" . s:homedir . "/.backups"
